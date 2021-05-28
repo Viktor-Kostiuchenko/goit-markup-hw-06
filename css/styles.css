@@ -330,12 +330,48 @@ ol {
   fill: var(--primary-white-color);
 }
 
-.join {
+.social-call {
   display: block;
   margin-bottom: 20px;
   color: var(--primary-white-color);
   text-transform: uppercase;
   line-height: 1.17;
+}
+
+.subscription {
+  margin-left: auto;
+}
+
+.subscription-call {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  line-height: 1.17;
+}
+
+.subscription-box {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-form-wrapper {
+  margin-right: 12px;
+}
+
+.subscription-form {
+}
+
+.button.subscribe {
+  padding: 10px 28px;
+}
+
+.button .icon-send {
+  margin-left: 10px;
+
+  fill: currentColor;
+
+  transition: fill var(--duration-timing-function);
 }
 
 /* ! ===================================END OF FOOTER=================================== */
@@ -375,7 +411,9 @@ ol {
 
 /** Button */
 .button {
-  display: block;
+  display: flex;
+  align-items: center;
+
   min-width: 200px;
   padding: 10px 32px;
   margin-left: auto;
