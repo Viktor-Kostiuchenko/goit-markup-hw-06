@@ -335,6 +335,7 @@ ol {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
@@ -1002,7 +1003,7 @@ ol {
 
 /*? вариант задать чекбокс через css в background-image*/
 
-.checkbox-icon {
+/* .checkbox-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -1029,15 +1030,11 @@ ol {
   background-origin: border-box;
 
   transform: scale(1.2);
-}
-
-.checkbox:focus:checked {
-  outline-color: #000000;
-}
+} */
 
 /*? вариант задать чекбокс через svg в html */
 
-/* .checkbox-icon {
+.checkbox-icon {
   margin-right: 8px;
 
   border: 2px solid var(--black-icon-color);
@@ -1059,7 +1056,7 @@ ol {
   background-color: var(--accent-color);
 
   transform: scale(1.2);
-} */
+}
 /* ! ================================THE END OF A MODAL WINDOW================================ */
 
 /** Поставил анимашку лого при переходе на главную страницу */
