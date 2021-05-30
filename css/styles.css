@@ -9,6 +9,7 @@
   --secondary-bcg-color: #2f303a;
   --primary-icon-color: #afb1b8;
   --secondary-icon-color: #757575;
+  --black-icon-color: #212121;
 
   /* * transition */
   --duration-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -36,6 +37,10 @@
   --footer-contact-color: rgba(255, 255, 255, 0.6);
   --network-firm-color: rgba(255, 255, 255, 0.1);
 
+  --subscription-input-border: 1px solid rgba(255, 255, 255, 0.3);
+  --subscription-input-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  --subscription-placeholder-color: rgba(255, 255, 255, 0.6);
+
   /**portfolio */
   --portfolio-border-color: #eeeeee;
   --filter-btn-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
@@ -46,6 +51,10 @@
   /** fonts */
   --primary-font: Roboto, sans-serif;
   --logo-font: Raleway, sans-serif;
+
+  /** form */
+  --input-border: 1px solid rgba(33, 33, 33, 0.2);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
 }
 
 body {
@@ -121,7 +130,8 @@ ol {
 }
 
 .section-title.visually-hidden,
-.portfolio-title.visually-hidden {
+.portfolio-title.visually-hidden,
+.checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -272,130 +282,6 @@ ol {
 }
 
 /* ! ===================================END OF HEADER=================================== */
-
-/* ! =====================================FOOTER===================================== */
-/** Footer */
-.footer {
-  padding: 60px 0;
-
-  background-color: var(--secondary-bcg-color);
-}
-
-.footer > .container {
-  display: flex;
-  align-items: baseline;
-}
-
-.company-address {
-  margin-right: 70px;
-}
-
-.address {
-  margin-top: 20px;
-}
-
-.footer-contact .link {
-  color: var(--footer-contact-color);
-  transition: color var(--duration-timing-function);
-}
-
-.footer-contact .mail {
-  display: inline-block;
-  margin-bottom: 9px;
-}
-
-.footer .location {
-  display: inline-block;
-  margin-bottom: 9px;
-
-  color: var(--primary-white-color);
-}
-
-.footer-contact .location:hover,
-.footer-contact .link:hover,
-.footer-contact .location:focus,
-.footer-contact .link:focus {
-  color: var(--accent-color);
-}
-
-.company-socials .socials {
-  display: flex;
-}
-
-.network.firm {
-  background-color: var(--network-firm-color);
-}
-
-.firm > .icon-network {
-  fill: var(--primary-white-color);
-}
-
-.social-call {
-  display: block;
-  margin-bottom: 20px;
-  color: var(--primary-white-color);
-  text-transform: uppercase;
-  line-height: 1.17;
-}
-
-.subscription {
-  margin-left: auto;
-}
-
-.subscription-call {
-  display: block;
-  margin-bottom: 20px;
-  color: var(--primary-white-color);
-  text-transform: uppercase;
-  line-height: 1.17;
-}
-
-.subscription-box {
-  display: flex;
-  align-items: center;
-}
-
-.subscription-form-wrapper {
-  margin-right: 12px;
-}
-
-.subscription-form {
-  width: 358px;
-}
-
-.subscription-field input {
-  min-height: 50px;
-  width: 100%;
-  background-color: transparent;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
-
-.subscription [placeholder] {
-  padding-left: 10px;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.button.subscribe {
-  padding: 10px 28px;
-}
-
-.button .icon-send {
-  margin-left: 10px;
-
-  fill: currentColor;
-
-  transition: fill var(--duration-timing-function);
-}
-
-/* ! ===================================END OF FOOTER=================================== */
 
 /* ! ===================================INDEX.HTML=================================== */
 /** Hero */
@@ -790,6 +676,135 @@ ol {
 }
 /* ! ================================THE END OF PORTFOLIO.HTML================================ */
 
+/* ! =====================================FOOTER===================================== */
+/** Footer */
+.footer {
+  padding: 60px 0;
+
+  background-color: var(--secondary-bcg-color);
+}
+
+.footer > .container {
+  display: flex;
+  align-items: baseline;
+}
+
+.company-address {
+  margin-right: 70px;
+}
+
+.address {
+  margin-top: 20px;
+}
+
+.footer-contact .link {
+  color: var(--footer-contact-color);
+  transition: color var(--duration-timing-function);
+}
+
+.footer-contact .mail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+.footer .location {
+  display: inline-block;
+  margin-bottom: 9px;
+
+  color: var(--primary-white-color);
+}
+
+.footer-contact .location:hover,
+.footer-contact .link:hover,
+.footer-contact .location:focus,
+.footer-contact .link:focus {
+  color: var(--accent-color);
+}
+
+.company-socials .socials {
+  display: flex;
+}
+
+.firm {
+  background-color: var(--network-firm-color);
+}
+
+.firm > .icon-network {
+  fill: var(--primary-white-color);
+}
+
+.social-call {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  line-height: 1.17;
+}
+
+.subscription {
+  margin-left: auto;
+}
+
+.subscription-call {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+  line-height: 1.17;
+}
+
+.subscription-box {
+  display: flex;
+  align-items: center;
+}
+
+.subscription-form {
+  width: 358px;
+  margin-right: 12px;
+}
+
+.subscription-input {
+  display: block;
+  min-height: 50px;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+
+  border-radius: 4px;
+  border: var(--subscription-input-border);
+  box-shadow: var(--subscription-input-shadow);
+
+  outline: none;
+
+  transition: border-color var(--duration-timing-function);
+}
+
+.subscription-input:focus,
+.subscription-input:hover {
+  border-color: var(--primary-white-color);
+}
+
+.subscription-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--subscription-placeholder-color);
+}
+
+.button.subscribe {
+  padding: 10px 28px;
+}
+
+.button .icon-send {
+  margin-left: 10px;
+
+  fill: currentColor;
+
+  transition: fill var(--duration-timing-function);
+}
+
+/* ! ===================================END OF FOOTER=================================== */
+
 /* ! ================================MODAL WINDOW================================ */
 
 .backdrop {
@@ -825,6 +840,7 @@ ol {
   left: 50%;
 
   padding: 40px;
+  margin-top: 0;
 
   min-height: 581px;
   min-width: 528px;
@@ -859,15 +875,12 @@ ol {
   transition: fill var(--duration-timing-function);
 }
 
-.close:hover .icon-close {
+.close:hover .icon-close,
+.close:focus .icon-close {
   fill: var(--accent-color);
 }
 
 /* ! ================================MODAL FORM================================ */
-
-.modal-form {
-  outline: 1px solid tomato;
-}
 
 .modal-call {
   display: block;
@@ -879,47 +892,97 @@ ol {
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--title-text-color);
 }
 
-.modal-form-field {
+.form-field {
   display: flex;
   flex-direction: column;
   width: 448px;
   margin: 0 auto 10px;
+
+  position: relative;
 }
 
-.modal-form-field input {
-  border: 1px solid rgba(33, 33, 33, 0.2);
+.form-input {
+  outline: none;
+  border: var(--input-border);
   border-radius: 4px;
+  padding: 11px 0px 11px 42px;
+
+  cursor: pointer;
+
+  transition: border-color var(--duration-timing-function);
 }
 
-.modal-form-field label {
+.form-icon {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  transition: fill var(--duration-timing-function);
+}
+
+.form-field:focus-within > .form-icon,
+.form-field:hover > .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-input:hover,
+.form-textarea:hover {
+  border-color: var(--accent-color);
+}
+
+.form-label {
   margin-bottom: 4px;
 
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
 
-  color: #757575;
+  color: var(--primary-text-color);
 }
 
-.modal-form-field.comment {
+.form-field.comment {
   margin-bottom: 20px;
 }
 
-.modal-form-field.policy {
+.form-textarea {
+  resize: none;
+  padding: 12px 16px;
+
+  outline: none;
+  border: var(--input-border);
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: border-color var(--duration-timing-function);
+}
+
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--placeholder-color);
+}
+
+.form-field.policy {
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.modal-form-field.policy input {
+.policy .form-input {
   margin-right: 7px;
 }
 
-.modal-form-field.policy label {
+.policy .form-label {
   display: block;
   margin-bottom: 0px;
 
@@ -927,32 +990,71 @@ ol {
   line-height: 1.71;
   letter-spacing: 0.03em;
 
-  color: #757575;
+  color: var(--primary-text-color);
 }
 
-.comment {
-}
-
-.textarea {
-  resize: none;
-  padding: 12px 16px;
-
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-}
-
-.textarea::placeholder {
-  font-size: 12px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-
-  color: rgba(117, 117, 117, 0.5);
+.checkbox-link {
+  color: var(--accent-color);
 }
 
 .button.send {
   padding: 10px 55px;
 }
 
+/*? вариант задать чекбокс через css*/
+
+/* .checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid var(--black-icon-color);
+  border-radius: 2px;
+
+  transform: scale(1);
+  transition: transform var(--duration-timing-function),
+   background-color var(--duration-timing-function),
+    border-color var(--duration-timing-function);
+
+  cursor: pointer;
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: transparent;
+  background-image: url(../images/icons/check.svg);
+  background-color: var(--accent-color);
+  background-size: contain;
+  background-origin: border-box;
+
+  transform: scale(1.2);
+} */
+
+/*? вариант задать чекбокс через инлайн свг */
+
+.checkbox-icon {
+  margin-right: 8px;
+
+  border: 2px solid var(--black-icon-color);
+  border-radius: 2px;
+
+  transform: scale(1);
+  transition: transform var(--duration-timing-function),
+    background-color var(--duration-timing-function),
+    border-color var(--duration-timing-function);
+
+  cursor: pointer;
+
+  fill: var(--primary-white-color);
+}
+
+.checkbox:checked + .checkbox-icon {
+  border-color: transparent;
+
+  background-color: var(--accent-color);
+
+  transform: scale(1.2);
+}
 /* ! ================================THE END OF A MODAL WINDOW================================ */
 
 /** Поставил анимашку лого при переходе на главную страницу */
