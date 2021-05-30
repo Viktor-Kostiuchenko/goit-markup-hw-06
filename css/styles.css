@@ -360,6 +360,27 @@ ol {
 }
 
 .subscription-form {
+  width: 358px;
+}
+
+.subscription-field input {
+  min-height: 50px;
+  width: 100%;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.subscription [placeholder] {
+  padding-left: 10px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .button.subscribe {
@@ -803,6 +824,8 @@ ol {
   top: 50%;
   left: 50%;
 
+  padding: 40px;
+
   min-height: 581px;
   min-width: 528px;
   border-radius: 4px;
@@ -838,6 +861,96 @@ ol {
 
 .close:hover .icon-close {
   fill: var(--accent-color);
+}
+
+/* ! ================================MODAL FORM================================ */
+
+.modal-form {
+  outline: 1px solid tomato;
+}
+
+.modal-call {
+  display: block;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.modal-form-field {
+  display: flex;
+  flex-direction: column;
+  width: 448px;
+  margin: 0 auto 10px;
+}
+
+.modal-form-field input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-form-field label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.modal-form-field.comment {
+  margin-bottom: 20px;
+}
+
+.modal-form-field.policy {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.modal-form-field.policy input {
+  margin-right: 7px;
+}
+
+.modal-form-field.policy label {
+  display: block;
+  margin-bottom: 0px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.comment {
+}
+
+.textarea {
+  resize: none;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.button.send {
+  padding: 10px 55px;
 }
 
 /* ! ================================THE END OF A MODAL WINDOW================================ */
