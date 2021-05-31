@@ -770,6 +770,8 @@ ol {
   background-color: transparent;
   padding: 10px;
 
+  color: var(--primary-white-color);
+
   border-radius: 4px;
   border: var(--subscription-input-border);
   box-shadow: var(--subscription-input-shadow);
@@ -918,7 +920,7 @@ ol {
 .form-icon {
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 29px;
   left: 12px;
 
   transition: fill var(--duration-timing-function);
@@ -1057,6 +1059,11 @@ ol {
 
   transform: scale(1.2);
 }
+
+.checkbox:focus + .checkbox-icon {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
 /* ! ================================THE END OF A MODAL WINDOW================================ */
 
 /** Поставил анимашку лого при переходе на главную страницу */
